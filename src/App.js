@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import IziComponent from './HvComponent/IziComponent'
+import {MediumComponent} from './HvComponent/MediumComponent'
+import {list, todoList} from './HvComponent/ComponetValue'
+import HardComponent1 from "./HvComponent/HardComponent1";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <IziComponent firstName="Alex" lastName="Panasiuk"/>
+        <br/>
+      <MediumComponent text={list}/>
+        <br/>
+      <HardComponent1 todoList={todoList} />
     </div>
   );
 }
